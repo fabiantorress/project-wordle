@@ -10,9 +10,12 @@ function TextInput({guess, handleSubmit, handleChangeInput, disabledInput}) {
         type="text"
         value={guess}
         onChange={handleChangeInput}
-        pattern="[A-Za-z]{1,5}$"
+        pattern="[A-Za-z]{5}$"
+        maxLength={5}
+        minLength={5}
         required={true}
         disabled={disabledInput}
+        title="5 letter word"
       />
     </form>
   );
